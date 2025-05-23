@@ -42,12 +42,6 @@ const Hero = () => {
         Get real-time COVID-19 updates, prevention tips, and vaccination info to
         protect yourself and your loved ones.
       </p>
-      <a
-        href="/stats"
-        className="hero-button px-6 py-3 bg-red-600 text-white text-lg rounded-full hover:bg-blue-700 transition duration-300"
-      >
-        Check Statistics
-      </a>
     </section>
   );
 };
