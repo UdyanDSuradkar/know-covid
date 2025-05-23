@@ -1,12 +1,59 @@
-# React + Vite
+# 🦠 Know Covid - Awareness & Statistics Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and animated React-based website that raises awareness about COVID-19 and displays real-time global statistics using the [disease.sh API](https://disease.sh/).
 
-Currently, two official plugins are available:
+ <!--![Know Covid Preview](./preview.png) <!-- Optional: Add a real screenshot here -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Modern Hero section with Lottie animations
+- ✅ Real-time COVID-19 global statistics
+- ✅ Animated 404 Not Found page with GSAP
+- ✅ Responsive navbar with route-based navigation
+- ✅ Scroll effects and smooth transitions
+- ✅ Modular code with reusable components
+- ✅ Built with React, Tailwind CSS, GSAP, and React Router
+
+---
+
+## 🧪 Live Demo
+
+<!-- Replace with your actual deployment link -->
+[🌐 View Live Website](https://your-deployment-url.netlify.app)
+
+---
+
+## 🚀 Tech Stack
+
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [GSAP](https://greensock.com/gsap/)
+- [Lottie React](https://www.npmjs.com/package/lottie-react)
+- [disease.sh API](https://disease.sh/)
+
+---
+
+## 🖼️ Pages and Sections
+
+- `/` — Hero landing page
+- `/stats` — Live global COVID-19 statistics
+- `/prevention`, `/symptoms`, `/vaccination`, `/news`, `/resources` — Informational pages (optional to build)
+- `*` — Custom 404 page with ghost animation
+
+---
+
+## 🔧 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/know-covid.git
+cd know-covid
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
