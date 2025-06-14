@@ -1,20 +1,27 @@
-import "./index.css";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import NavBar from "./components/Navbar";
-import Hero from "./sections/Hero";
-import Stats from "./components/stats"; // ✅ make sure this file exists
-import NotFound from "./pages/NotFound"; // ✅ your custom 404
+import Home from "./pages/Home";
+import GlobalStats from "./pages/GlobalStats";
+import CountryStats from "./pages/CountryStats";
+import AboutCovid from "./pages/AboutCovid";
+import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/stats" element={<Stats />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/global" element={<GlobalStats />} />
+          <Route path="/country" element={<CountryStats />} />
+          <Route path="/about" element={<AboutCovid />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
     </Router>
   );
 }

@@ -1,159 +1,187 @@
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-@import "tailwindcss";
-
-:root {
-  --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
-}
+/* Reset and base styles */
 
 html,
 body {
-  width: 100dvw;
-  overflow-x: hidden;
-  background-color: black;
-  color: white;
-  scroll-behavior: smooth;
-  font-family: "Mona Sans", sans-serif;
+    height: 100%;
 }
 
-section {
-  width: 100dvw;
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-@theme {
-  --font-sans: "Mona Sans", sans-serif;
-  --color-white-50: #d9ecff;
-  --color-black-50: #1c1c21;
-  --color-black-100: #0e0e10;
-  --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
+main {
+    flex: 1;
 }
 
-@layer utilities {
-  .flex-center {
-    @apply flex justify-center items-center;
-  }
-
-  .flex-col-center {
-    @apply flex flex-col justify-center items-center;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@layer components {
-  .padding-x {
-    @apply px-5 md:px-10;
-  }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
 
-  .padding-x-lg {
-    @apply px-5 md:px-20;
-  }
+/* Header */
+.header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  .section-padding {
-    @apply px-5 md:px-10 md:mt-40 mt-20;
-  }
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-  .mt-responsive {
-    @apply xl:mt-20 md:mt-0 mt-40;
-  }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-  /* General Grids */
-  .grid-base {
-    @apply grid grid-cols-1;
-  }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
 
-  .grid-2-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
-  }
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-  .grid-3-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
-  }
+.nav-links a:hover {
+    text-decoration: underline;
+}
 
-  .grid-3-cols-md-tight {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0;
-  }
+/* Hero Section */
+.hero-section {
+    background-color: #eaf3fb;
+    padding: 4rem 2rem;
+    text-align: center;
+}
 
-  .grid-4-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
-  }
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #003366;
+}
 
-  .grid-12-cols {
-    @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
-  }
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
 
-  .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
-  }
+/* Stats Sections */
+.world-stats,
+.symptoms-section,
+.prevention-section,
+.faq-section,
+.global-stats-page,
+.country-stats-page,
+.about-covid-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .hero-text {
-    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+h2 {
+    margin-bottom: 1rem;
+    color: #003366;
+}
 
-    img {
-      @apply size-8 md:size-10 object-contain;
+ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Dropdown for country selection */
+select {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* FAQ */
+.faq-section details {
+    margin-bottom: 1rem;
+}
+
+.faq-section summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* NotFound */
+.not-found-page {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.not-found-page a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer a {
+    color: #a8d0ff;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.75rem;
     }
 
-    .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
-    }
-  }
-
-  .hero-badge {
-    @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
-  }
-
-  .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
-  }
-
-  .navbar {
-    @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
-
-    &.scrolled {
-      @apply top-0 bg-black;
+    .hero-section h1 {
+        font-size: 2rem;
     }
 
-    &.not-scrolled {
-      @apply md:top-10 top-0 bg-transparent;
+    .hero-section p {
+        font-size: 1rem;
     }
 
-    .inner {
-      @apply mx-auto flex items-center justify-between;
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .logo {
-      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+        margin-bottom: 1rem;
     }
-
-    nav.desktop {
-      @apply hidden lg:flex items-center;
-
-      ul {
-        @apply flex space-x-8;
-
-        li {
-          @apply text-white-50 relative;
-
-          span {
-            @apply transition-colors duration-300 hover:text-white;
-          }
-
-          .underline {
-            @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full;
-          }
-        }
-      }
-    }
-
-    .contact-btn {
-      @apply flex;
-
-      .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-red-950 group-hover:bg-red-950 transition-colors duration-300;
-
-        span {
-          @apply group-hover:text-white transition-colors duration-300;
-        }
-      }
-    }
-  }
 }
