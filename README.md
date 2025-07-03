@@ -21,7 +21,7 @@ A responsive and animated React-based website that raises awareness about COVID-
 ## 🧪 Live Demo
 
 <!-- Replace with your actual deployment link -->
-[🌐 View Live Website](https://your-deployment-url.netlify.app)
+[🌐 View Live Website]()
 
 ---
 
