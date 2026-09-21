@@ -3,8 +3,6 @@
 A COVID-19 observatory: four years of global figures made legible, plus current WHO
 surveillance. Built with React 19, Vite and hand-written SVG/Canvas — no chart library.
 
-**Live demo:** _add your Vercel URL here_
-
 ---
 
 ## What's in it
